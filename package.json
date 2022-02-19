@@ -1,12 +1,23 @@
 {
   "name": "hexo-next-fcircle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fcircle for theme-next",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "qidaink",
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "lib/",
+    "index.js"
+  ],
+  "keywords": [
+    "hexo",
+    "theme-next"
+  ],
   "license": "Apache-2.0",
   "repository": {
     "type": "git",

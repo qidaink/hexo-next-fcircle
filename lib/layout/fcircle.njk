@@ -1,0 +1,26 @@
+{#*=====================================================================
+* FileName: fcircle.njk
+* FileInstructions: 友链朋友圈模板文件
+* Author: qidaink
+* =======================================================================#}
+
+<!-- 友链朋友圈样式 -->
+<link rel="stylesheet" href="{{ fcircleCSS }}">
+<div id="fcircleContainer"></div>
+<!-- 全局引入友链朋友圈配置项 -->
+<script data-pjax="{{ fcirclePjax }}" >
+  // 全局变量声明区域
+  var fdata = {
+    apiurl: "{{ apiurl }}",
+    initnumber: {{ initnumber }}, //【可选】页面初始化展示文章数量
+    stepnumber: {{ stepnumber }}, //【可选】每次加载增加的篇数
+    error_img: "{{ error_img }}"  //【可选】头像加载失败时默认显示的头像
+  }
+  //存入本地存储
+  localStorage.setItem("fdatalist",JSON.stringify(fdata))
+</script>
+<!-- 全局引入抓取方法 -->
+<script data-pjax="{{ fcirclePjax }}" defer src="{{ fetchJs }}"></script>
+
+<!-- 局部引入页面元素生成方法 -->
+<script data-pjax="{{ fcirclePjax }}" async="async" src="{{ fcircleJs }}" charset="utf-8"></script>
